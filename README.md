@@ -88,6 +88,7 @@ On Successfull Login -> Welfare Schemes Dashboard
 ## STEP Dashboard
 Main Header contains logo and heading "Support to Training and Employment Programme for Women (STEP)"
 
+```
 Sub Header contains link
 1. About Us
 2. Guidelines
@@ -96,6 +97,7 @@ Sub Header contains link
 5. Registration      On successfull registration user can access training courses.
 6. Status            Check application status
 7. FAQ
+```
 
 ### Registration
 1. Personal Details
@@ -109,6 +111,7 @@ Sub Header contains link
 ## NGOs Dashboard
 Main Header contains logo and heading "Non Governmental Organizations (NGOs)"
 
+```
 Sub Header contains link
 1. Criteria         Criteria for registering the NGO in MWCD
 2. Organizations    Registered Organizations of MWCD
@@ -116,6 +119,7 @@ Sub Header contains link
 4. Register         Register Organization into the MWCD
 5. Status           Provide approval status of the Organizaztion in MWCD
 6. FAQ
+```
 
 ### Registration
 1. Organization Details 
@@ -126,7 +130,9 @@ Sub Header contains link
 
 ## Admin Dashboard
 
+```
 Sub Header contains link
 1. About Us
 2. NGOs
 3. Trainees
+```
