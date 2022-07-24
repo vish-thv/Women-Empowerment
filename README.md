@@ -1,27 +1,61 @@
-# WomenEmpowerment
+# Women Empowerment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
+## Objective
+Provide accommodation for working women, with day care facility for their children.
 
-## Development server
+## Eligibility
+### Working Women
+Priority on martial status: Single, Widowed, Divorced
+Priority to Women's whose husband or immediate family members doesn't reside in the same city.
+Reservation of seats for physically challenged beneficiaries.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Women's on training
+If there is vacancy available after accommodating working women.
+Training period should not exceed 1 year.
+Maximum accommodation for training women is 30%.
 
-## Code scaffolding
+### For Working Mothers
+Girls upto age of 18 years and boys upto age of 5 years will be provided accommodation or day care facility.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Hostel Facilities
+Metropolitan cities, Gross income doesn't exceed 50000
+Other cities, Gross income doesn't exceed 35000
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Schemes
 
-## Running unit tests
+### 1. Sukanya Samridhi Yojna
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### Objective
+```
+Build a fund for future education and marriage expenses.
+```
 
-## Running end-to-end tests
+#### Eligibility
+```
+Nationality                              -     Indian
+Entry age	                             -     From birth
+Maximum entry age	                     -     10 years
+Minimum limit for deposits per year	INR  -     1000
+Maximum limit for deposit per year	INR  -     1.5 lakh
+Withdrawal age	                         -     18 years
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Note: No interest shall be payable from the date of residency change and account will be closed prematurely.
+```
 
-## Further help
+### 2. The Support to Training and Employment Programme for Women (STEP)
+#### Objective
+```
+Provide employablility skills in various sectors.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Agriculture, Horticulture, Food Processing, Handlooms, Tailoring, Stitching, Embroidery, Zari etc.
+
+Handicrafts, Computer & IT enable services along with soft skills and skills for the workplace such as spoken English, Gems &Jewellery etc
+```
+
+#### Eligibility
+```
+Women of age group 16 years and above.
+```
+
