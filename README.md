@@ -39,8 +39,8 @@ Build a fund for future education and marriage expenses.
 Nationality                                 -     Indian
 Entry age                                   -     From birth
 Maximum entry age                           -     10 years
-Minimum limit for deposits per year	INR     -     1000
-Maximum limit for deposit per year	INR     -     1.5 lakh
+Minimum limit for deposits per year INR     -     1000
+Maximum limit for deposit per year INR      -     1.5 lakh
 Withdrawal age                              -     18 years
 
 Note: No interest shall be payable from the date of residency change and account will be closed prematurely.
