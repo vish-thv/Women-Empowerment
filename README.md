@@ -6,7 +6,9 @@ Provide accommodation for working women, with day care facility for their childr
 ## Eligibility
 ### Working Women
 Priority on martial status: Single, Widowed, Divorced
+
 Priority to Women's whose husband or immediate family members doesn't reside in the same city.
+
 Reservation of seats for physically challenged beneficiaries.
 
 ### Women's on training
@@ -34,12 +36,12 @@ Build a fund for future education and marriage expenses.
 
 #### Eligibility
 ```
-Nationality                              -     Indian
-Entry age	                             -     From birth
-Maximum entry age	                     -     10 years
-Minimum limit for deposits per year	INR  -     1000
-Maximum limit for deposit per year	INR  -     1.5 lakh
-Withdrawal age	                         -     18 years
+Nationality                                 -     Indian
+Entry age                                   -     From birth
+Maximum entry age                           -     10 years
+Minimum limit for deposits per year	INR     -     1000
+Maximum limit for deposit per year	INR     -     1.5 lakh
+Withdrawal age                              -     18 years
 
 Note: No interest shall be payable from the date of residency change and account will be closed prematurely.
 ```
