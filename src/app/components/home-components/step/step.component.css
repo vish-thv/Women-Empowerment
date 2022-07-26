@@ -1,0 +1,20 @@
+.step-form {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.step-form > div {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.step-form form {
+    /* border: 0.5px solid rgba(0, 0, 0, 0.4); */
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+    margin: 0px 30px;
+    background: white;
+}
+

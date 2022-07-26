@@ -1,0 +1,44 @@
+header {
+}
+
+header > div:first-child {
+    background: #3f51b5;
+    height: 50px;
+    color: rgb(229, 229, 229);
+}
+
+header div:nth-child(2) {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+header > div:last-child {
+    height: 40px;
+}
+
+header > div:first-child > div:first-child,
+header > div:first-child > div:last-child {
+    width: 150px;
+}
+
+nav a {
+    padding: 10px 15px;
+    background: #297baa;
+    color: rgb(229, 229, 229);
+    text-decoration: none;
+    font-size: 15px;
+}
+nav a:first-child {
+    border-bottom-left-radius: 5px;
+}
+nav a:last-child {
+    border-bottom-right-radius: 5px;
+}
+
+nav .active {
+    background: rgb(65, 65, 65);
+}
+
+.logo {
+    margin: 0px 30px;
+}

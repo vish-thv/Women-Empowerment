@@ -138,3 +138,22 @@ Sub Header contains link
 2. NGOs
 3. Trainees
 ```
+
+
+## Angular | Development Settings
+
+## Popular Links
+[Angular Material](https://material.angular.io/components/input/overview)
+[Material Design Icon](https://materialdesignicons.com/)
+
+### Installations
+```
+ng add @angular/material
+```
+
+```
+npm i -s @angular/flex-layout @angular/cdk
+```
+
+
+
