@@ -25,11 +25,15 @@ import { FaqComponent } from './components/home-components/faq/faq.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { RegistrationComponent } from './components/step-dashboard-components/registration/registration.component';
 import { NgosComponent } from './components/step-dashboard-components/ngos/ngos.component';
-import { StatusComponent } from './components/step-dashboard-components/status/status.component';
 import { GuidelinesComponent } from './components/step-dashboard-components/guidelines/guidelines.component';
 import { TrainingSectorsComponent } from './components/step-dashboard-components/training-sectors/training-sectors.component';
 import { HomeContentComponent } from './components/home-components/home-content/home-content.component';
 import { FooterComponent } from './components/home-components/footer/footer.component';
+import { StepNavigationMenuComponent } from './components/step-dashboard-components/step-navigation-menu/step-navigation-menu.component';
+import { StepDashboardContentHeaderComponent } from './components/step-dashboard-components/step-dashboard-content-header/step-dashboard-content-header.component';
+import { StepFaqComponent } from './components/step-dashboard-components/step-faq/step-faq.component';
+import { StepStatusComponent } from './components/step-dashboard-components/step-status/step-status.component';
+import { StepDashboardMainComponent } from './components/step-dashboard-components/step-dashboard-main/step-dashboard-main.component';
 
 @NgModule({
   declarations: [
@@ -46,11 +50,15 @@ import { FooterComponent } from './components/home-components/footer/footer.comp
     AboutUsComponent,
     RegistrationComponent,
     NgosComponent,
-    StatusComponent,
     GuidelinesComponent,
     TrainingSectorsComponent,
     HomeContentComponent,
-    FooterComponent
+    FooterComponent,
+    StepNavigationMenuComponent,
+    StepDashboardContentHeaderComponent,
+    StepFaqComponent,
+    StepStatusComponent,
+    StepDashboardMainComponent
   ],
   imports: [
     BrowserModule,
