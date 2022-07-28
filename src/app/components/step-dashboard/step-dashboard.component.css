@@ -1,44 +1,71 @@
+.step-dashboard {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 header {
-}
-
-header > div:first-child {
-    background: #3f51b5;
     height: 50px;
-    color: rgb(229, 229, 229);
+    background: rgb(54 110 178);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header div:nth-child(2) {
-    font-size: 18px;
-    font-weight: bold;
+header h2 {
+    color: white;
+    margin: 0;
 }
 
-header > div:last-child {
+
+.step-dashboard-body {
+    flex: 1;
+    display: flex;
+}
+
+.router-content-container {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.navigation-container {
+    background: white;
+    border-top-right-radius: 10px;
+}
+.router-content-container {
+    display: flex;
+    flex-direction: column;
+}
+.navigation-container .router-content {
+    flex: 1;
+}
+
+.router-content {
+    flex: 1;
+    background: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+footer {
+    margin-top: 20px;
+    background: rgb(44, 44, 44);
     height: 40px;
-}
-
-header > div:first-child > div:first-child,
-header > div:first-child > div:last-child {
-    width: 150px;
-}
-
-nav a {
-    padding: 10px 15px;
-    background: #297baa;
-    color: rgb(229, 229, 229);
-    text-decoration: none;
+    border-top-left-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 15px;
-}
-nav a:first-child {
-    border-bottom-left-radius: 5px;
-}
-nav a:last-child {
-    border-bottom-right-radius: 5px;
+    font-style: italic;
+    color: rgb(232, 232, 232);
 }
 
-nav .active {
-    background: rgb(65, 65, 65);
+.toggle-navigation-btn {
+    background: none;
+    border: none;
 }
 
-.logo {
-    margin: 0px 30px;
+.toggle-navigation-btn:hover {
+    background: rgba(0, 0, 0, 0.3);
 }

@@ -31,3 +31,80 @@ body {
 .mb-10 {
     margin-bottom: 10px;
 }
+
+
+.logo {
+    margin: 0px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(246, 246, 246);
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.dashboard-content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.dashboard-content-header > div:first-child {
+    font-size: 16px;
+}
+
+.dashboard-content {
+    padding: 10px;
+    overflow: auto;
+    flex:1;
+}
+
+.dashboard-content > div {
+    height: 1px;
+}
+
+.route-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.route-content-wrapper > div:last-child {
+    flex: 1;
+}
+
+.logged-in-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 7px 15px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+.logged-in-user:hover {
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+.logged-in-user > svg {
+    margin-left: 10px;
+}
+
+.toggle-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toggle-logo-container button {
+    margin-left: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+}

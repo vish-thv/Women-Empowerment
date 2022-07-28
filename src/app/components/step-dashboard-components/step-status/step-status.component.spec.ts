@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StatusComponent } from './status.component';
+import { StepStatusComponent } from './step-status.component';
 
-describe('StatusComponent', () => {
-  let component: StatusComponent;
-  let fixture: ComponentFixture<StatusComponent>;
+describe('StepStatusComponent', () => {
+  let component: StepStatusComponent;
+  let fixture: ComponentFixture<StepStatusComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StatusComponent ]
+      declarations: [ StepStatusComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(StatusComponent);
+    fixture = TestBed.createComponent(StepStatusComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

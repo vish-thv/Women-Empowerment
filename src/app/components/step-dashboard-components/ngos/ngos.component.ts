@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-ngos',
+  selector: 'ngos',
   templateUrl: './ngos.component.html',
   styleUrls: ['./ngos.component.css']
 })

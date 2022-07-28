@@ -11,9 +11,11 @@ import { HomeComponent } from './components/home/home.component';
 import { GuidelinesComponent } from './components/step-dashboard-components/guidelines/guidelines.component';
 import { NgosComponent } from './components/step-dashboard-components/ngos/ngos.component';
 import { RegistrationComponent } from './components/step-dashboard-components/registration/registration.component';
-import { StatusComponent } from './components/step-dashboard-components/status/status.component';
+import { StepStatusComponent } from './components/step-dashboard-components/step-status/step-status.component';
+import { StepFaqComponent } from './components/step-dashboard-components/step-faq/step-faq.component';
 import { TrainingSectorsComponent } from './components/step-dashboard-components/training-sectors/training-sectors.component';
 import { StepDashboardComponent } from './components/step-dashboard/step-dashboard.component';
+import { StepDashboardMainComponent } from './components/step-dashboard-components/step-dashboard-main/step-dashboard-main.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -37,12 +39,13 @@ const routes: Routes = [
     path: 'step',
     component: StepDashboardComponent,
     children: [
+      {path: 'dashboard', component: StepDashboardMainComponent},
       {path: 'registration', component: RegistrationComponent},
       {path: 'ngos', component: NgosComponent},
       {path: 'training-sectors', component: TrainingSectorsComponent},
       {path: 'guidelines', component: GuidelinesComponent},
-      {path: 'faq', component: FaqComponent},
-      {path: 'status', component: StatusComponent}
+      {path: 'faq', component: StepFaqComponent},
+      {path: 'status', component: StepStatusComponent}
     ]
   }
 ];
