@@ -2,12 +2,18 @@
     
     <step-dashboard-content-header>
         <div>Registration</div>
-        <div></div>
+        <div>
+            <nav>
+                <a routerLink="trainee-personal-details" routerLinkActive="active" ariaCurrentWhenActive="page">Personal Details</a>
+                <a routerLink="trainee-family-details" routerLinkActive="active" ariaCurrentWhenActive="page">Family Details</a>
+                <a routerLink="trainee-address-details" routerLinkActive="active" ariaCurrentWhenActive="page">Address Details</a>
+            </nav>
+        </div>
     </step-dashboard-content-header>
     
     <div class="dashboard-content">
         <div>
-            <!-- Content here... -->
+            <router-outlet></router-outlet>
         </div>
     </div>
     

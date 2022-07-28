@@ -16,6 +16,9 @@ import { StepFaqComponent } from './components/step-dashboard-components/step-fa
 import { TrainingSectorsComponent } from './components/step-dashboard-components/training-sectors/training-sectors.component';
 import { StepDashboardComponent } from './components/step-dashboard/step-dashboard.component';
 import { StepDashboardMainComponent } from './components/step-dashboard-components/step-dashboard-main/step-dashboard-main.component';
+import { StepPersonalDetailsComponent } from './components/step-dashboard-components/forms/step-personal-details/step-personal-details.component';
+import { StepAddressDetailsComponent } from './components/step-dashboard-components/forms/step-address-details/step-address-details.component';
+import { StepFamilyDetailsComponent } from './components/step-dashboard-components/forms/step-family-details/step-family-details.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -40,7 +43,15 @@ const routes: Routes = [
     component: StepDashboardComponent,
     children: [
       {path: 'dashboard', component: StepDashboardMainComponent},
-      {path: 'registration', component: RegistrationComponent},
+      {
+        path: 'registration', 
+        component: RegistrationComponent,
+        children: [
+          {path: 'trainee-personal-details', component: StepPersonalDetailsComponent},
+          {path: 'trainee-family-details', component: StepFamilyDetailsComponent},
+          {path: 'trainee-address-details', component: StepAddressDetailsComponent}
+        ]
+      },
       {path: 'ngos', component: NgosComponent},
       {path: 'training-sectors', component: TrainingSectorsComponent},
       {path: 'guidelines', component: GuidelinesComponent},
