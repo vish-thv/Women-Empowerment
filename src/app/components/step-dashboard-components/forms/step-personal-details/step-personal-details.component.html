@@ -1,0 +1,62 @@
+<h3>Personal Details</h3>
+<form>
+    <div class="form-row">
+        <div class="form-col">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>E-mail</mat-label>
+                <input matInput >
+            </mat-form-field>
+        </div>
+        <div class="form-col">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Aadhaar</mat-label>
+                <input matInput >
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-col">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Pan</mat-label>
+                <input matInput >
+            </mat-form-field>
+        </div>
+        <div class="form-col">
+            <mat-form-field appearance="fill">
+                <mat-label>Martial Status</mat-label>
+                <mat-select>
+                  <mat-option *ngFor="let s of martialStatus" [value]="s">
+                    {{s}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-col">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Religion</mat-label>
+                <input matInput >
+            </mat-form-field>
+        </div>
+        <div class="form-col">
+            <mat-form-field appearance="fill">
+              <mat-label>Category</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let c of category" [value]="c">
+                  {{c}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="space-between">
+        <button mat-flat-button color="" type="reset">Reset</button>
+        <button mat-flat-button color="primary" type="submit">Save</button>
+    </div>
+
+
+</form>

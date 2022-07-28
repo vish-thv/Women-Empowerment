@@ -8,6 +8,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Components
@@ -34,6 +35,9 @@ import { StepDashboardContentHeaderComponent } from './components/step-dashboard
 import { StepFaqComponent } from './components/step-dashboard-components/step-faq/step-faq.component';
 import { StepStatusComponent } from './components/step-dashboard-components/step-status/step-status.component';
 import { StepDashboardMainComponent } from './components/step-dashboard-components/step-dashboard-main/step-dashboard-main.component';
+import { StepPersonalDetailsComponent } from './components/step-dashboard-components/forms/step-personal-details/step-personal-details.component';
+import { StepFamilyDetailsComponent } from './components/step-dashboard-components/forms/step-family-details/step-family-details.component';
+import { StepAddressDetailsComponent } from './components/step-dashboard-components/forms/step-address-details/step-address-details.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +62,10 @@ import { StepDashboardMainComponent } from './components/step-dashboard-componen
     StepDashboardContentHeaderComponent,
     StepFaqComponent,
     StepStatusComponent,
-    StepDashboardMainComponent
+    StepDashboardMainComponent,
+    StepPersonalDetailsComponent,
+    StepFamilyDetailsComponent,
+    StepAddressDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -69,6 +76,7 @@ import { StepDashboardMainComponent } from './components/step-dashboard-componen
     [FlexLayoutModule],
     MatButtonModule,
     MatCheckboxModule,
+    MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
     MatTableModule,
