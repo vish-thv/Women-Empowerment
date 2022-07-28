@@ -24,6 +24,7 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
+    /* height: 71px; */
 }
 .form-col .mat-form-field {
     flex: 1;
@@ -54,7 +55,7 @@ body {
     justify-content: space-between;
     align-items: center;
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
-    padding: 10px;
+    padding: 10px 20px;
     height: 30px;
 }
 
@@ -63,7 +64,7 @@ body {
 }
 
 .dashboard-content {
-    padding: 10px;
+    padding: 10px 20px;
     overflow: auto;
     flex:1;
 }
@@ -117,7 +118,7 @@ body {
 
 
 .mat-form-field-appearance-fill .mat-form-field-flex {
-    background: white;
+    /* background: white; */
 }
 
 .mat-form-field-appearance-fill .mat-form-field-label {
@@ -140,4 +141,11 @@ input.mat-input-element {
 
 textarea {
     min-height: 100px;
+}
+
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background-color: rgb(54 110 178);
+}
+.mat-checkbox-checked:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element, .mat-checkbox:active:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element {
+    background: rgb(54 110 178);
 }

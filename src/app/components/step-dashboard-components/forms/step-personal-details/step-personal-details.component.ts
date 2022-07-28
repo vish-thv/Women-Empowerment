@@ -10,7 +10,7 @@ export class StepPersonalDetailsComponent implements OnInit {
 
   martialStatus: string[] = ['Single', 'Married', 'Divorced', 'Widowed']
   category: string[] = ['ST/SC', 'OBC', 'General']
-
+  disabilities: string[] = ['vision Impairment', 'deaf or hard of hearing','mental health conditions', 'intellectual disability', 'acquired brain injury', 'autism spectrum disorder' ,'physical disability']
   constructor() { }
 
   ngOnInit(): void {
