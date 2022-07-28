@@ -32,12 +32,12 @@ nav {
     padding-bottom: 15px;
 }
 .nav-container > div:first-child {
-    color: rgb(103 176 190);
+    color: rgb(247, 247, 247);
 }
 
-header > div:first-child,
+header > a:first-child,
 header > div:last-child {
-    width: 150px;
+    width: 200px;
 }
 
 nav a {
@@ -60,17 +60,7 @@ nav a:last-child {
 }
 
 nav .active {
-    background: rgb(109 176 189);
+    background: rgb(244, 244, 244);
     color: #821854;
 }
 
-.logo {
-    margin: 0px 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(103 176 190);
-    font-weight: bold;
-    font-size: 18px;
-    text-decoration: none;
-}
