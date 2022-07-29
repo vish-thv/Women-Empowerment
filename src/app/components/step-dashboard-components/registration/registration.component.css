@@ -12,6 +12,10 @@ nav a {
     white-space: nowrap;
 }
 
+nav a svg {
+    margin-right: 5px;
+}
+
 nav .active {
     background: rgb(54 110 178);
     color: white;

@@ -1,5 +1,16 @@
 <h3>Address Details</h3>
 <form [formGroup]="addressDetails" (submit)="saveAddressDetails()">
+
+    <div class="form-row">
+        <div class="form-col">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Trainee Id</mat-label>
+                <input formControlName="TraineeId" matInput >
+            </mat-form-field>
+        </div>
+        <div class="form-col"></div>
+    </div>
+    
     <div class="form-row">
         <div class="form-col">
             <mat-form-field class="example-full-width" appearance="fill">

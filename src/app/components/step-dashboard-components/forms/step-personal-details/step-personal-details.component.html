@@ -1,16 +1,27 @@
 <h3>Personal Details</h3>
 <form [formGroup]="personalDetails" (submit)="savePersonalDetails()">
+
+    <div class="form-row">
+        <div class="form-col">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Trainee Id</mat-label>
+                <input formControlName="TraineeId" matInput >
+            </mat-form-field>
+        </div>
+        <div class="form-col"></div>
+    </div>
+
     <div class="form-row">
         <div class="form-col">
             <mat-form-field class="example-full-width" appearance="fill">
                 <mat-label>E-mail</mat-label>
-                <input formControlName="Email" matInput >
+                <input formControlName="EmailId" matInput >
             </mat-form-field>
         </div>
         <div class="form-col">
             <mat-form-field class="example-full-width" appearance="fill">
                 <mat-label>Aadhaar</mat-label>
-                <input formControlName="Aadhaar" matInput >
+                <input maxlength="12" formControlName="Aadhaar" matInput >
             </mat-form-field>
         </div>
     </div>
@@ -56,7 +67,7 @@
     <div class="form-row">
         <div class="form-col">
             <section class="example-section">
-                <mat-checkbox class="example-margin" formControlName="Pwd"  #pwd>Person with Disability</mat-checkbox>
+                <mat-checkbox class="example-margin" [checked]="true" formControlName="PersonWithDisability"  #pwd>Person with Disability</mat-checkbox>
               </section>
         </div>
         <div class="form-col">
