@@ -12,6 +12,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CookieService } from 'ngx-cookie-service';
 
 // Components
 import { AppRoutingModule } from './app-routing.module';
@@ -86,7 +87,7 @@ import { StepAddressDetailsComponent } from './components/step-dashboard-compone
     MatTableModule,
     MatInputModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

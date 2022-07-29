@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { TraineeService } from 'src/app/services/trainee/trainee.service';
 
 @Component({
   selector: 'app-step',
@@ -11,11 +12,12 @@ export class StepComponent implements OnInit {
 
   // @ts-ignore
   stepLogin: FormGroup
+  loginErrorMessage: string = ''
 
   // @ts-ignore
   stepRegister: FormGroup
 
-  constructor(private router: Router, private formBuilder: FormBuilder) { }
+  constructor(private router: Router, private formBuilder: FormBuilder, private traineeService: TraineeService) { }
 
   ngOnInit(): void {
     // initialize step login form
