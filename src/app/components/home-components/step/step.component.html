@@ -25,6 +25,7 @@
                     </mat-form-field>
                 </div>
             </div>
+            <div style="color: red;" *ngIf="loginErrorMessage != ''">{{loginErrorMessage}}</div>
             <div fxLayout="row" fxLayoutAlign="space-between">
                 <button mat-flat-button  type="reset">Reset</button>
                 <button mat-flat-button color="primary" type="submit" [disabled]="stepLogin.invalid">Login</button>
