@@ -15,7 +15,12 @@ export class StepFamilyDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.familyDetails = this.formBuilder.group({
-      
+      MotherName:['', [Validators.required]],
+      MotherDesignation:['', [Validators.required]],
+      FatherName:['', [Validators.required]],
+      FatherDesignation:['', [Validators.required]],
+      HusbandName:[''],
+      NumberOfChildren:['']
     })
   }
 

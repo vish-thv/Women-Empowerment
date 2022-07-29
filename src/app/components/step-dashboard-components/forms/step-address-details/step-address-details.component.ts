@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-step-address-details',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StepAddressDetailsComponent implements OnInit {
 
-  constructor() { }
+  // @ts-ignore
+  addressDetails: FormGroup
+
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.addressDetails = this.formBuilder.group({
+      State:['', [Validators.required]],
+      City:['', [Validators.required]],
+      District:['', [Validators.required]],
+      Pincode:['', [Validators.required]],
+      Address:['', [Validators.required]]
+    })
+  }
+
+  saveAddressDetails(): void {
+    console.log(this.addressDetails.value)
   }
 
 }
