@@ -1,0 +1,31 @@
+.course-card-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.course-card-row:last-child {
+    padding-bottom: 10px;
+}
+
+.course-card {
+    flex: 1;
+    margin-right: 10px;
+    background: rgb(238, 244, 254);
+    border-radius: 10px;
+}
+
+.course-card:last-child {
+    margin-right: 0px;
+}
+
+.course-card > h3 {
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.course-card > p {
+    padding: 10px;
+    text-align: justify;
+}

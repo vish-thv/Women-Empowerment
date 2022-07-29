@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-step-family-details',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StepFamilyDetailsComponent implements OnInit {
 
-  constructor() { }
+  // @ts-ignore
+  familyDetails: FormGroup
+
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.familyDetails = this.formBuilder.group({
+      
+    })
+  }
+
+  saveFamilyDetails(): void {
+    console.log(this.familyDetails.value)
   }
 
 }
