@@ -1,8 +1,9 @@
 .body{
-   padding:20px;
-   /* padding-top:10px; */
+   padding: 50px;
+   padding-top:30px;
    background-color:white;
    font-size: 20px;
+   margin: 0px 50px;
 }
 .head{
     background-color:rgb(184, 184, 224, 0.3);
@@ -13,4 +14,7 @@
 }
 .content{
 
+}
+h1 {
+    padding:10px 20px;
 }
