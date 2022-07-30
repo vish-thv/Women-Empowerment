@@ -11,6 +11,39 @@ body {
     background: rgba(0, 0, 0, 0.1);
 }
 
+p {
+    line-height: 1.6;
+    text-align: justify;
+    font-size: 16px;
+}
+
+.flex-row {
+    display: flex;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.jc-c {
+    justify-content: center;
+}
+.jc-e {
+    justify-content: flex-end;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+.ai-c {
+    align-items: center;
+}
+.ai-e {
+    align-items: flex-end;
+}
+
 .form-row {
     display: flex;
 }
@@ -36,6 +69,22 @@ body {
 
 .mb-10 {
     margin-bottom: 10px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.pb-20 {
+    padding-bottom: 20px;
 }
 
 
@@ -148,4 +197,33 @@ textarea {
 }
 .mat-checkbox-checked:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element, .mat-checkbox:active:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element {
     background: rgb(54 110 178);
+}
+
+.form-error {
+    color: red;
+    display: flex;
+    align-items: center;
+    margin-top: -15px;
+    font-size: 13px;
+}
+
+.form-error svg {
+    margin-right: 5px;
+    width: 18px;
+    height: 18px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    white-space: nowrap;
+}
+th, td {
+    text-align: left;
+    padding: 10px;
+
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
 }

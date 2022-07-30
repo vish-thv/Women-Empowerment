@@ -10,6 +10,11 @@ nav a {
     display: flex;
     align-items: center;
     white-space: nowrap;
+    border-radius: 5px;
+}
+
+nav a svg {
+    margin-right: 5px;
 }
 
 nav .active {
