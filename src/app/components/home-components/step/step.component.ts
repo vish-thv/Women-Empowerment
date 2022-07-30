@@ -17,6 +17,8 @@ export class StepComponent implements OnInit {
   // @ts-ignore
   stepRegister: FormGroup
 
+  stepRegisterSubmitted: boolean = false
+
   constructor(private router: Router, private formBuilder: FormBuilder, private traineeService: TraineeService) { }
 
   ngOnInit(): void {
@@ -28,11 +30,12 @@ export class StepComponent implements OnInit {
 
     // initialize stepRegister form
     this.stepRegister = this.formBuilder.group({
-      FullName: ['', [Validators.required]],
-      Username: ['',[Validators.required]],
+      FullName: ['', [Validators.required, Validators.pattern('[a-zA-Z]{3,30}')]],
+      Username: ['',[Validators.required, Validators.pattern('[a-zA-Z0-9]{8,30}')]],
       DateOfBirth: ['', Validators.required],
-      Contact: ['', [Validators.required]],
-      Password: ['', [Validators.required]]
+      Contact: ['', [Validators.required, Validators.pattern('[789][0-9]{9}')]],
+      Password: ['', [Validators.required]],
+      ConfirmPassword: ['', [Validators.required]]
     })
   }
 
@@ -41,6 +44,7 @@ export class StepComponent implements OnInit {
   }
 
   register(): void {
+    this.stepRegisterSubmitted = true
     console.log(this.stepRegister.value)
   }
 

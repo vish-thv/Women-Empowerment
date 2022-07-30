@@ -1,0 +1,17 @@
+table {
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+}
+
+.app-status {
+    display: flex;
+    align-items: center;
+}
+.app-status svg {
+    margin-right: 5px;
+}
