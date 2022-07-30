@@ -1,0 +1,16 @@
+.body{
+   padding:20px;
+   /* padding-top:10px; */
+   background-color:white;
+   font-size: 20px;
+}
+.head{
+    background-color:rgb(184, 184, 224, 0.3);
+    border-radius: 5px;
+    padding-left:5px;
+    margin-top: 10px;
+    border-color: black;
+}
+.content{
+
+}
