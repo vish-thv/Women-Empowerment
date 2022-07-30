@@ -1,6 +1,6 @@
 .main-banner {
     height: 80vh;
-    background-image: url('../../../../assets/images/women-empowerment.webp');
+    background-image: url('../../../../assets/images/wm.webp');
     position: relative;
     background-size: contain;
     background-repeat: no-repeat;
@@ -84,10 +84,6 @@ blockquote {
     flex: 1;
 }
 
-.mandate {
-    background: white;
-    padding: 20px 50px;
-}
 
 .quote {
     margin: 20px 50px;
@@ -116,4 +112,37 @@ h2 {
     padding-right: 100px;
     padding-bottom: 50px;
     text-align: center;
+}
+.mandate {
+    background: #fef6f6;
+    padding: 20px 50px;
+    display: flex;
+}
+
+.mandate img {
+    height: 400px;
+    margin-right: 50px;
+}
+.mandate > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mandate h2 {
+    text-align: left;
+}
+.mandate-heading {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.mandate > div > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.mandate-desc {
+    padding: 0px 30px;
 }
