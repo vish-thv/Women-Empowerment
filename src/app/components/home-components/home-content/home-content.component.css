@@ -6,6 +6,7 @@
     background-repeat: no-repeat;
 }
 
+
 .overlay {
     background: rgba(0, 0, 0, 0.4);
     width: 100%;
@@ -145,4 +146,55 @@ h2 {
 
 .mandate-desc {
     padding: 0px 30px;
+}
+
+
+.main-banner > span  {
+    color: white;
+    z-index: 8;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.main-banner:hover > span  {
+    display: flex;
+}
+.main-banner > span:hover  {
+    background: rgba(0, 0, 0, 0.4);
+    
+}
+.main-banner .previous {
+    left: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.main-banner .next {
+    right: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.switch-banner {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    z-index: 8;
+}
+.switch-banner span {
+    width: 15px;
+    height: 15px;
+    background: white;
+    display: block;
+    border-radius: 50%;
+    margin: 0px 5px;
+}
+
+.switch-banner span:hover {
+    background: #5c0436;
 }
