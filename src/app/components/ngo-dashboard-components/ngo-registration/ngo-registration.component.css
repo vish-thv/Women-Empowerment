@@ -6,7 +6,7 @@ nav a {
     padding: 5px 10px;
     flex: 1;
     text-decoration: none;
-    color: rgb(54 110 178);
+    color: rgb(178, 87, 54);
     display: flex;
     align-items: center;
     white-space: nowrap;
@@ -18,15 +18,15 @@ nav a svg {
 }
 
 nav .active {
-    background: rgb(54 110 178);
+    background: rgb(178, 87, 54);
     color: white;
 }
 
 nav a:hover {
-    background: rgb(54, 110, 178, 0.2);
+    background: rgb(178, 87, 54, o.2);
 }
 
 nav .active:hover {
-    background: rgb(54 110 178);
+    background: rgb(178, 87, 54);
     color: white;
 }
