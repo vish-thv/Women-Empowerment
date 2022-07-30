@@ -1,6 +1,6 @@
 <div class="step-form" fxLayout="row" fxLayoutAlign="center center">
     <div>
-        <form class="step-login-form">
+        <form [formGroup]="adminRegister" (submit)="register()" class="step-login-form">
             <h1 fxLayout="row" fxLayoutAlign="center center">
                 <svg style="width:24px;height:24px;margin-right:10px;" viewBox="0 0 24 24">
                     <path fill="currentColor"
@@ -26,12 +26,12 @@
             </div>
             <div fxLayout="row" fxLayoutAlign="space-between">
                 <button mat-flat-button type="reset">Reset</button>
-                <button mat-flat-button color="primary" type="submit">Login</button>
+                <button mat-flat-button color="primary" type="submit" [disabled]="adminRegister.invalid">Register</button>
             </div>
         </form>
     </div>
     <div fxLayout="row" fxLayoutAlign="center center">
-        <form class="step-login-form">
+        <form [formGroup]="adminLogin" (submit)="login()" class="step-login-form">
             <h1 fxLayout="row" fxLayoutAlign="center center">
                 <svg style="width:24px;height:24px;margin-right:10px;" viewBox="0 0 24 24">
                     <path fill="currentColor"
@@ -57,7 +57,7 @@
             </div>
             <div fxLayout="row" fxLayoutAlign="space-between">
                 <button mat-flat-button type="reset">Reset</button>
-                <button mat-flat-button color="primary" type="submit">Login</button>
+                <button mat-flat-button color="primary" type="submit" [disabled]="adminLogin.invalid">Login</button>
             </div>
         </form>
     </div>
