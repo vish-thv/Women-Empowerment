@@ -12,17 +12,19 @@ export class StepAddressDetailsComponent implements OnInit {
   // @ts-ignore
   addressDetails: FormGroup
 
+  submitted: boolean = false
+
   constructor(private formBuilder: FormBuilder, private traineeAddressDetailsService: TraineeAddressDetailsService) { }
 
   ngOnInit(): void {
     this.getAddressDetails()
     this.addressDetails = this.formBuilder.group({
-      TraineeId: ['1', [Validators.required]],
+      TraineeId: ['1', [Validators.required, Validators.pattern('[0-9]+')]],
       State:['', [Validators.required, Validators.pattern('[a-zA-Z]+')]],
-      City:['', [Validators.required]],
-      District:['', [Validators.required]],
-      Pincode:['', [Validators.required]],
-      Address:['', [Validators.required]]
+      City:['', [Validators.required, Validators.pattern('[a-zA-Z]+')]],
+      District:['', [Validators.required, Validators.pattern('[a-zA-Z]+')]],
+      Pincode:['', [Validators.required, Validators.pattern('[0-9]{6}')]],
+      Address:['', [Validators.required, Validators.pattern('[a-zA-Z0-9,]+')]]
     })
   }
 
@@ -33,6 +35,7 @@ export class StepAddressDetailsComponent implements OnInit {
   }
 
   saveAddressDetails(): void {
+    this.submitted=true;
     console.log(this.addressDetails.value)
 
     this.traineeAddressDetailsService.postAddressDetails(this.addressDetails.value).subscribe((d) => {

@@ -33,7 +33,7 @@ export class StepPersonalDetailsComponent implements OnInit {
       Religion: ['', [Validators.required, Validators.pattern('[a-zA-Z]+')]],
       Category: ['', [Validators.required]],
       PersonWithDisability: [''],
-      DisabilityType: ['']
+      DisabilityType: ['', [Validators.required]]
     })
   }
 

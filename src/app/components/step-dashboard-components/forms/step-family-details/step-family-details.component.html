@@ -17,12 +17,26 @@
                 <mat-label>Mother Name</mat-label>
                 <input formControlName="MotherName" matInput >
             </mat-form-field>
+            <div *ngIf="submitted && familyDetails.controls['MotherName'].invalid" class="form-error">
+                <svg style="width:15px;height:15px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M10 3H14V14H10V3M10 21V17H14V21H10Z" />
+                </svg>
+                <span *ngIf="familyDetails.controls['MotherName'].errors!['required']">Mother's name required</span>
+                <span *ngIf="familyDetails.controls['MotherName'].errors!['pattern']">Invalid Name</span>
+            </div>
         </div>
         <div class="form-col">
             <mat-form-field class="example-full-width" appearance="fill">
                 <mat-label>Mother Designation</mat-label>
                 <input formControlName="MotherDesignation" matInput >
             </mat-form-field>
+            <div *ngIf="submitted && familyDetails.controls['MotherDesignation'].invalid" class="form-error">
+                <svg style="width:15px;height:15px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M10 3H14V14H10V3M10 21V17H14V21H10Z" />
+                </svg>
+                <span *ngIf="familyDetails.controls['MotherDesignation'].errors!['required']">Mother's designation required</span>
+                <span *ngIf="familyDetails.controls['MotherDesignation'].errors!['pattern']">Invalid Designation</span>
+            </div>
         </div>
     </div>
 
@@ -32,12 +46,26 @@
                 <mat-label>Father Name</mat-label>
                 <input formControlName="FatherName" matInput >
             </mat-form-field>
+            <div *ngIf="submitted && familyDetails.controls['FatherName'].invalid" class="form-error">
+                <svg style="width:15px;height:15px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M10 3H14V14H10V3M10 21V17H14V21H10Z" />
+                </svg>
+                <span *ngIf="familyDetails.controls['FatherName'].errors!['required']">Father's name required</span>
+                <span *ngIf="familyDetails.controls['FatherName'].errors!['pattern']">Invalid Name</span>
+            </div>
         </div>
         <div class="form-col">
             <mat-form-field class="example-full-width" appearance="fill">
                 <mat-label>Father Designation</mat-label>
                 <input formControlName="FatherDesignation" matInput >
             </mat-form-field>
+            <div *ngIf="submitted && familyDetails.controls['FatherDesignation'].invalid" class="form-error">
+                <svg style="width:15px;height:15px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M10 3H14V14H10V3M10 21V17H14V21H10Z" />
+                </svg>
+                <span *ngIf="familyDetails.controls['FatherDesignation'].errors!['required']">Father's name required</span>
+                <span *ngIf="familyDetails.controls['FatherDesignation'].errors!['pattern']">Invalid Designation</span>
+            </div>
         </div>
     </div>
 
