@@ -57,6 +57,8 @@ import { NgoRegistrationComponent } from './components/ngo-dashboard-components/
 import { NgoOrganizationDetailsComponent } from './components/ngo-dashboard-components/forms/ngo-organization-details/ngo-organization-details.component';
 import { NgoContactDetailsComponent } from './components/ngo-dashboard-components/forms/ngo-contact-details/ngo-contact-details.component';
 import { NgoCoursesComponent } from './components/ngo-dashboard-components/forms/ngo-courses/ngo-courses.component';
+import { ErrorMessageComponent } from './components/utility/error-message/error-message.component';
+import { SuccessMessageComponent } from './components/utility/success-message/success-message.component';
 
 @NgModule({
   declarations: [
@@ -100,7 +102,9 @@ import { NgoCoursesComponent } from './components/ngo-dashboard-components/forms
     NgoRegistrationComponent,
     NgoOrganizationDetailsComponent,
     NgoContactDetailsComponent,
-    NgoCoursesComponent
+    NgoCoursesComponent,
+    ErrorMessageComponent,
+    SuccessMessageComponent
   ],
   imports: [
     BrowserModule,

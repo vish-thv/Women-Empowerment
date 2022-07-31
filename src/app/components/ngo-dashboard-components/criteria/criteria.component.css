@@ -12,8 +12,6 @@
     padding-top:10px;
     font-weight: bold;
     font-family: Arial;
-    margin-left:40px;
-    margin-right:40px;
 }
 .box1{
     font-size: 18px;
@@ -23,13 +21,13 @@
     display:flex;
     /* justify-content: space-between; */
     /* border-style:initial; */
-    /* border-color:rgb(223, 53, 53); */
+    /* border-color:rgb(200 80 80); */
     border: width 1px;
-    border-left: 30px solid rgb(223, 53, 53);
-    border-right: 5px solid rgb(223, 53, 53);
-    border-top: solid rgb(223, 53, 53);
-    border-bottom: solid rgb(223, 53, 53);
-    /* border-bottom: 5px solid rgb(223, 53, 53); */
+    border-left: 30px solid rgb(200 80 80);
+    border-right: 5px solid rgb(200 80 80);
+    border-top: solid rgb(200 80 80);
+    border-bottom: solid rgb(200 80 80);
+    /* border-bottom: 5px solid rgb(200 80 80); */
 }
 .content{
 

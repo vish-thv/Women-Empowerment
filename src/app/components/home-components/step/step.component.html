@@ -40,37 +40,68 @@
                 </svg>
                 <span>STEP Registration</span>
             </h1>
+            <success-message *ngIf="registerSuccessMessage">{{registerSuccessMessage}}</success-message>
+            <error-message *ngIf="registerErrorMessage">{{registerErrorMessage}}</error-message>
             <div class="form-row">
                 <div class="form-col">
                     <mat-form-field appearance="fill">
                         <mat-label>Full Name</mat-label>
                         <input maxlength="30" type="text" formControlName="FullName" matInput>
                     </mat-form-field>
-                    <div class="form-error" *ngIf="stepRegisterSubmitted && stepRegister.controls['FullName'].invalid">ffafa</div>
+                    <div *ngIf="stepRegisterSubmitted && stepRegister.controls['FullName'].invalid" class="form-error">
+                        <svg style="width:15px;height:15px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M10 3H14V14H10V3M10 21V17H14V21H10Z" />
+                        </svg>
+                        <span *ngIf="stepRegister.controls['FullName'].errors!['required']">Full Name required</span>
+                        <span *ngIf="stepRegister.controls['FullName'].errors!['pattern']">Name can only contain alphabets</span>
+                    </div>
                 </div>
                 <div class="form-col">
                     <mat-form-field appearance="fill">
                         <mat-label>Username</mat-label>
                         <input type="text" maxlength="30" formControlName="Username" matInput>
                     </mat-form-field>
+                    <div *ngIf="stepRegisterSubmitted && stepRegister.controls['Username'].invalid" class="form-error">
+                        <svg style="width:15px;height:15px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M10 3H14V14H10V3M10 21V17H14V21H10Z" />
+                        </svg>
+                        <span *ngIf="stepRegister.controls['Username'].errors!['required']">Username required</span>
+                        <span *ngIf="stepRegister.controls['Username'].errors!['pattern']">Username should only contain alphabets and digits, mimium length 6</span>
+                    </div>
                 </div>
             </div>
 
             <div class="form-row mb-10">
                 <div class="form-col">
+                    <!-- <mat-form-field appearance="fill">
+                        <mat-label>Date of Birth</mat-label>
+                        <input type="text" formControlName="DateOfBirth" matInput>
+                    </mat-form-field> -->
                     <mat-form-field appearance="fill">
                         <mat-label>Date of Birth</mat-label>
                         <input formControlName="DateOfBirth" matInput [matDatepicker]="picker">
-                        <mat-hint>MM/DD/YYYY</mat-hint>
                         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                         <mat-datepicker #picker></mat-datepicker>
-                      </mat-form-field>
+                    </mat-form-field>
+                    <div *ngIf="stepRegisterSubmitted && stepRegister.controls['DateOfBirth'].invalid" class="form-error">
+                        <svg style="width:15px;height:15px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M10 3H14V14H10V3M10 21V17H14V21H10Z" />
+                        </svg>
+                        <span *ngIf="stepRegister.controls['DateOfBirth'].errors!['required']">Date of Birth required</span>
+                    </div>
                 </div>
                 <div class="form-col">
                     <mat-form-field appearance="fill">
                         <mat-label>Contact</mat-label>
                         <input type="number" formControlName="Contact" matInput>
                     </mat-form-field>
+                    <div *ngIf="stepRegisterSubmitted && stepRegister.controls['Contact'].invalid" class="form-error">
+                        <svg style="width:15px;height:15px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M10 3H14V14H10V3M10 21V17H14V21H10Z" />
+                        </svg>
+                        <span *ngIf="stepRegister.controls['Contact'].errors!['required']">Contact required</span>
+                        <span *ngIf="stepRegister.controls['Contact'].errors!['pattern']">Invalid Contact</span>
+                    </div>
                 </div>
             </div>
 
@@ -78,17 +109,24 @@
                 <div class="form-col">
                     <mat-form-field appearance="fill">
                         <mat-label>Password</mat-label>
-                        <input type="password" formControlName="Password" matInput #password>
+                        <input minlength="8" type="password" formControlName="Password" matInput #password>
                     </mat-form-field>
+                    <div *ngIf="stepRegisterSubmitted && stepRegister.controls['Password'].invalid" class="form-error">
+                        <svg style="width:15px;height:15px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M10 3H14V14H10V3M10 21V17H14V21H10Z" />
+                        </svg>
+                        <span *ngIf="stepRegister.controls['Password'].errors!['required']">Password required</span>
+                        <span *ngIf="password.value != '' && password.value.length < 8">Password should contain atleast 8 characters</span>
+                    </div>
                 </div>
                 <div class="form-col">
                     <mat-form-field appearance="fill">
                         <mat-label>Confirm Password</mat-label>
                         <input type="password" formControlName="ConfirmPassword" matInput #confirmPassword>
                     </mat-form-field>
-                    <div class="form-error" *ngIf="password.value != confirmPassword.value">
-                        <svg viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M 11,4L 13,4L 13,15L 11,15L 11,4 Z M 13,18L 13,20L 11,20L 11,18L 13,18 Z" />
+                    <div *ngIf="confirmPassword.value != '' && password.value != confirmPassword.value" class="form-error">
+                        <svg style="width:15px;height:15px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M10 3H14V14H10V3M10 21V17H14V21H10Z" />
                         </svg>
                         <span>Password not matched</span>
                     </div>
@@ -97,7 +135,7 @@
 
             <div fxLayout="row" fxLayoutAlign="space-between">
                 <button mat-flat-button type="reset">Reset</button>
-                <button mat-flat-button color="primary" type="submit" [disabled]="stepRegister.invalid">Register</button>
+                <button mat-flat-button color="primary" type="submit" >Register</button>
             </div>
           </form>
     </div>
