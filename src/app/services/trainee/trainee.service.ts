@@ -20,9 +20,11 @@ export class TraineeService {
   }
 
   login(data: any): Observable<any> {
-
     return this.httpClient.post<any>(this.baseURL + 'login', data, this.httpOptions)
   }
   
+  register(data: any): Observable<any> {
+    return this.httpClient.post<any>(this.baseURL + 'register', data, this.httpOptions)
+  }
   
 }

@@ -30,7 +30,7 @@ export class StepComponent implements OnInit {
 
     // initialize stepRegister form
     this.stepRegister = this.formBuilder.group({
-      FullName: ['', [Validators.required, Validators.pattern('[a-zA-Z]{3,30}')]],
+      FullName: ['', [Validators.required, Validators.pattern('[a-zA-Z ]{3,30}')]],
       Username: ['',[Validators.required, Validators.pattern('[a-zA-Z0-9]{8,30}')]],
       DateOfBirth: ['', Validators.required],
       Contact: ['', [Validators.required, Validators.pattern('[789][0-9]{9}')]],
@@ -46,6 +46,13 @@ export class StepComponent implements OnInit {
   register(): void {
     this.stepRegisterSubmitted = true
     console.log(this.stepRegister.value)
+
+    if(this.stepRegister.invalid)
+      return
+
+    this.traineeService.register(this.stepRegister.value).subscribe((d) => {
+      console.log(d)
+    })
   }
 
 }
