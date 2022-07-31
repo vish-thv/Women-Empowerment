@@ -29,7 +29,7 @@ export class TraineeAddressDetailsService {
 
   handleError(err: HttpErrorResponse) {
     console.log(err)
-    return throwError(err.error)
+    return throwError(err)
   }
 
 }

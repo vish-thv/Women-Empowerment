@@ -16,7 +16,7 @@ export class NgoCoursesComponent implements OnInit {
     this.courseService.getCourses().subscribe((res) => {
       this.courses = res.data
     }, (err) => {
-      alert(err.error)
+      alert(err.error.error)
     })
   }
 

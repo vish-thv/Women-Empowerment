@@ -35,7 +35,7 @@ export class AdminCoursesComponent implements OnInit {
       console.log(res.data)
       this.disableEditAndDelte()
     }, (err) => {
-      alert(err.error)
+      alert(err.error.error)
     })
   }
 
