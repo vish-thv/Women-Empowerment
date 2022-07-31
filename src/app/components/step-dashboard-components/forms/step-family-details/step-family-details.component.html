@@ -1,4 +1,7 @@
 <h3>Family Details</h3>
+<error-message *ngIf="errorMessage">{{errorMessage}}</error-message>
+
+<success-message *ngIf="successMessage">{{successMessage}}</success-message>
 <form [formGroup]="familyDetails" (submit)="saveFamilyDetails()">
 
     <div class="form-row">

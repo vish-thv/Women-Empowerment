@@ -11,7 +11,8 @@ export class StepFamilyDetailsComponent implements OnInit {
 
   // @ts-ignore
   familyDetails: FormGroup
-
+  errorMessage:string=''
+  successMessage: string = ''
   submitted: boolean = false
 
   constructor(private formBuilder: FormBuilder, private traineeFamilyDetailsService: TraineeFamilyDetailsService) { }
@@ -38,10 +39,17 @@ export class StepFamilyDetailsComponent implements OnInit {
 
   saveFamilyDetails(): void {
     this.submitted=true;
+    this.successMessage = ''
+    this.errorMessage = ''
+    
     console.log(this.familyDetails.value)
-
-    this.traineeFamilyDetailsService.postFamilyDetails(this.familyDetails.value).subscribe((d) => {
-      console.log(d)
+    if(this.familyDetails.invalid)
+      return
+    this.traineeFamilyDetailsService.postFamilyDetails(this.familyDetails.value).subscribe((res) => {
+      this.successMessage=res.success;
+      this.familyDetails.reset()
+    }, (err) => {
+      this.errorMessage=err.error
     })
   }
 

@@ -11,7 +11,8 @@ export class StepAddressDetailsComponent implements OnInit {
 
   // @ts-ignore
   addressDetails: FormGroup
-
+  errorMessage:string=''
+  successMessage: string = ''
   submitted: boolean = false
 
   constructor(private formBuilder: FormBuilder, private traineeAddressDetailsService: TraineeAddressDetailsService) { }
@@ -36,10 +37,16 @@ export class StepAddressDetailsComponent implements OnInit {
 
   saveAddressDetails(): void {
     this.submitted=true;
+    this.successMessage = ''
+    this.errorMessage = ''
     console.log(this.addressDetails.value)
-
-    this.traineeAddressDetailsService.postAddressDetails(this.addressDetails.value).subscribe((d) => {
-      console.log(d)
+    if(this.addressDetails.invalid)
+      return
+    this.traineeAddressDetailsService.postAddressDetails(this.addressDetails.value).subscribe((res) => {
+      this.successMessage=res.success;
+      this.addressDetails.reset()
+    }, (err) => {
+      this.errorMessage=err.error
     })
   }
 }
