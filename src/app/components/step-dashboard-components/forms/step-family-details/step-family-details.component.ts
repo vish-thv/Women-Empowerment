@@ -12,16 +12,18 @@ export class StepFamilyDetailsComponent implements OnInit {
   // @ts-ignore
   familyDetails: FormGroup
 
+  submitted: boolean = false
+
   constructor(private formBuilder: FormBuilder, private traineeFamilyDetailsService: TraineeFamilyDetailsService) { }
 
   ngOnInit(): void {
     this.getFamilyDetails()
     this.familyDetails = this.formBuilder.group({
-      TraineeId: ['1', [Validators.required]],
-      MotherName:['', [Validators.required]],
-      MotherDesignation:['', [Validators.required]],
-      FatherName:['', [Validators.required]],
-      FatherDesignation:['', [Validators.required]],
+      TraineeId: ['1', [Validators.required, Validators.pattern('[0-9]+')]],
+      MotherName:['', [Validators.required, Validators.pattern('[a-zA-Z]+')]],
+      MotherDesignation:['', [Validators.required, Validators.pattern('[a-zA-Z]+')]],
+      FatherName:['', [Validators.required, Validators.pattern('[a-zA-Z]+')]],
+      FatherDesignation:['', [Validators.required, Validators.pattern('[a-zA-Z]+')]],
       HusbandName:[''],
       NumberOfChildren:['']
     })
@@ -35,6 +37,7 @@ export class StepFamilyDetailsComponent implements OnInit {
   }
 
   saveFamilyDetails(): void {
+    this.submitted=true;
     console.log(this.familyDetails.value)
 
     this.traineeFamilyDetailsService.postFamilyDetails(this.familyDetails.value).subscribe((d) => {
