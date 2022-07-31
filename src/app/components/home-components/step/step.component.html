@@ -40,6 +40,8 @@
                 </svg>
                 <span>STEP Registration</span>
             </h1>
+            <success-message *ngIf="registerSuccessMessage">{{registerSuccessMessage}}</success-message>
+            <error-message *ngIf="registerErrorMessage">{{registerErrorMessage}}</error-message>
             <div class="form-row">
                 <div class="form-col">
                     <mat-form-field appearance="fill">
@@ -71,16 +73,16 @@
 
             <div class="form-row mb-10">
                 <div class="form-col">
-                    <mat-form-field appearance="fill">
+                    <!-- <mat-form-field appearance="fill">
                         <mat-label>Date of Birth</mat-label>
                         <input type="text" formControlName="DateOfBirth" matInput>
-                    </mat-form-field>
-                    <!-- <mat-form-field appearance="fill">
+                    </mat-form-field> -->
+                    <mat-form-field appearance="fill">
                         <mat-label>Date of Birth</mat-label>
                         <input formControlName="DateOfBirth" matInput [matDatepicker]="picker">
                         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                         <mat-datepicker #picker></mat-datepicker>
-                    </mat-form-field> -->
+                    </mat-form-field>
                     <div *ngIf="stepRegisterSubmitted && stepRegister.controls['DateOfBirth'].invalid" class="form-error">
                         <svg style="width:15px;height:15px" viewBox="0 0 24 24">
                             <path fill="currentColor" d="M10 3H14V14H10V3M10 21V17H14V21H10Z" />

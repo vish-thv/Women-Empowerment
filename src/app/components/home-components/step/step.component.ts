@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TraineeService } from 'src/app/services/trainee/trainee.service';
+import { Trainee } from 'src/app/models/trainee/trainee';
 
 @Component({
   selector: 'app-step',
@@ -15,9 +16,13 @@ export class StepComponent implements OnInit {
   loginErrorMessage: string = ''
 
   // @ts-ignore
-  stepRegister: FormGroup
+  trainee: Trainee
 
+  // @ts-ignore
+  stepRegister: FormGroup
   stepRegisterSubmitted: boolean = false
+  registerErrorMessage: string = ''
+  registerSuccessMessage: string = ''
 
   constructor(private router: Router, private formBuilder: FormBuilder, private traineeService: TraineeService) { }
 
@@ -45,13 +50,21 @@ export class StepComponent implements OnInit {
 
   register(): void {
     this.stepRegisterSubmitted = true
-    console.log(this.stepRegister.value)
+    this.registerErrorMessage = ''
+    this.registerSuccessMessage = ''
 
     if(this.stepRegister.invalid)
       return
 
-    this.traineeService.register(this.stepRegister.value).subscribe((d) => {
-      console.log(d)
+    this.trainee = this.stepRegister.value
+
+    this.traineeService.register(this.trainee).subscribe((res) => {
+      this.stepRegister.reset();
+      this.stepRegisterSubmitted = false
+      this.registerSuccessMessage = res.success
+    }, (err) => {
+      this.stepRegisterSubmitted = false
+      this.registerErrorMessage = err
     })
   }
 
