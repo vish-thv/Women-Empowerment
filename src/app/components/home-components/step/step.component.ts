@@ -88,7 +88,6 @@ export class StepComponent implements OnInit {
       this.stepRegisterSubmitted = false
       this.registerSuccessMessage = res.success
       console.log(res)
-      localStorage.setItem('TraineeId', res.data.traineeId)
     }, (err) => {
       this.stepRegisterSubmitted = false
       this.registerErrorMessage = err.error.error

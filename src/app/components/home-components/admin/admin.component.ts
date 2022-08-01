@@ -17,6 +17,7 @@ export class AdminComponent implements OnInit {
   adminRegister:FormGroup
 
   loginErrorMessage: string = ''
+  adminLoginSubmitted: boolean = false
   adminRegisterSubmitted: boolean = false
   registerErrorMessage: string = ''
   registerSuccessMessage: string = ''
@@ -45,7 +46,7 @@ export class AdminComponent implements OnInit {
       this.router.navigate(['admin', 'dashboard'])
       return
     }
-
+    this.adminLoginSubmitted = true
     this.loginErrorMessage = ''
     if(this.adminLogin.invalid)
       return
@@ -53,10 +54,10 @@ export class AdminComponent implements OnInit {
     this.adminService.login(this.adminLogin.value).subscribe((res) => {
       console.log(res)
       let data = res.data
-      let traineeId = data.adminId
+      let adminId = data.adminId
       let username = data.username
 
-      localStorage.setItem('AdminId', traineeId)
+      localStorage.setItem('AdminId', adminId)
       localStorage.setItem('AdminUsername', username)
 
       this.router.navigate(['admin', 'dashboard'])
@@ -80,7 +81,6 @@ export class AdminComponent implements OnInit {
       this.adminRegisterSubmitted = false
       this.registerSuccessMessage = res.success
       console.log(res)
-      localStorage.setItem('AdminId', res.data.adminId)
     }, (err) => {
       this.adminRegisterSubmitted = false
       this.registerErrorMessage = err.error.error
