@@ -23,7 +23,7 @@ export class NgoOrganizationDetailsComponent implements OnInit {
     this.getOrganizationDetails()
     this.organizationDetails = this.formBuilder.group({
       NgoId: [this.ngoId, [Validators.required]],
-      OrganizationName: ['', [Validators.required]],
+      OrganisationName: ['', [Validators.required]],
       ChairmanName: ['', [Validators.required]],
       Pan: ['', [Validators.required]],
       SecretaryName: ['', [Validators.required]],
