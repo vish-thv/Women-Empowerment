@@ -77,7 +77,6 @@ export class AdminComponent implements OnInit {
     this.admin = this.adminRegister.value
 
     this.adminService.register(this.admin).subscribe((res) => {
-      this.adminRegister.reset();
       this.adminRegisterSubmitted = false
       this.registerSuccessMessage = res.success
       console.log(res)
