@@ -18,6 +18,7 @@ export class NgoComponent implements OnInit {
 
   loginErrorMessage: string = ''
   ngoRegisterSubmitted: boolean = false
+  ngoLoginSubmitted: boolean = false
   registerErrorMessage: string = ''
   registerSuccessMessage: string = ''
 
@@ -48,6 +49,7 @@ export class NgoComponent implements OnInit {
       return
     }
 
+    this.ngoLoginSubmitted = true
     this.loginErrorMessage = ''
     if(this.ngoLogin.invalid)
       return
@@ -82,7 +84,6 @@ export class NgoComponent implements OnInit {
       this.ngoRegisterSubmitted = false
       this.registerSuccessMessage = res.success
       console.log(res)
-      localStorage.setItem('NgoId', res.data.ngoId)
     }, (err) => {
       this.ngoRegisterSubmitted = false
       this.registerErrorMessage = err.error.error
