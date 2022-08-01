@@ -9,6 +9,8 @@ import { NgoContactDetailsService } from 'src/app/services/ngo-details/ngo-conta
 })
 export class NgoContactDetailsComponent implements OnInit {
 
+  ngoId: number = Number(localStorage.getItem('NgoId'))
+
   // @ts-ignore
   contactDetails: FormGroup
   errorMessage:string=''
@@ -20,7 +22,7 @@ export class NgoContactDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.getContactDetails()
     this.contactDetails = this.formBuilder.group({
-      NgoId: ['1', [Validators.required]],
+      NgoId: [this.ngoId, [Validators.required]],
       State:['', [Validators.required, Validators.pattern('[a-zA-Z]+')]],
       City:['', [Validators.required]],
       District:['', [Validators.required]],
@@ -31,7 +33,7 @@ export class NgoContactDetailsComponent implements OnInit {
   }
 
   getContactDetails(): void {
-    this.ngoContactDetailsService.getContactDetails(1).subscribe((d) => {
+    this.ngoContactDetailsService.getContactDetails(this.ngoId).subscribe((d) => {
       console.log(d)
     })
   }

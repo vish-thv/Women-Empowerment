@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TraineeService } from 'src/app/services/trainee/trainee.service';
 import { Trainee } from 'src/app/models/trainee/trainee';
+import { TraineeLogin } from 'src/app/models/trainee/trainee-login';
 
 @Component({
   selector: 'app-step',
@@ -14,7 +15,6 @@ export class StepComponent implements OnInit {
   // @ts-ignore
   stepLogin: FormGroup
   loginErrorMessage: string = ''
-
   // @ts-ignore
   trainee: Trainee
 
@@ -27,9 +27,10 @@ export class StepComponent implements OnInit {
   constructor(private router: Router, private formBuilder: FormBuilder, private traineeService: TraineeService) { }
 
   ngOnInit(): void {
+
     // initialize step login form
     this.stepLogin = this.formBuilder.group({
-      Username: ['', [Validators.required]],
+      Username: ['', [Validators.required, Validators.pattern('[a-zA-Z0-9]{8,30}')]],
       Password: ['', [Validators.required]]
     })
 
@@ -45,7 +46,31 @@ export class StepComponent implements OnInit {
   }
 
   login(): void {
-    console.log(this.stepLogin.value)
+
+    if(localStorage.getItem('TraineeId') != null) {
+      this.router.navigate(['step', 'dashboard'])
+      return
+    }
+
+    this.loginErrorMessage = ''
+    if(this.stepLogin.invalid)
+      return
+
+    this.traineeService.login(this.stepLogin.value).subscribe((res) => {
+      console.log(res)
+      let data = res.data
+      let fullName = data.fullName
+      let traineeId = data.traineeId
+      let username = data.username
+
+      localStorage.setItem('TraineeId', traineeId)
+      localStorage.setItem('TraineeFullName', fullName)
+      localStorage.setItem('TraineeUsername', username)
+
+      this.router.navigate(['step', 'dashboard'])
+    }, (err) => {
+      this.loginErrorMessage = err.error.error
+    })
   }
 
   register(): void {
@@ -66,7 +91,7 @@ export class StepComponent implements OnInit {
       localStorage.setItem('TraineeId', res.data.traineeId)
     }, (err) => {
       this.stepRegisterSubmitted = false
-      this.registerErrorMessage = err
+      this.registerErrorMessage = err.error.error
     })
   }
 

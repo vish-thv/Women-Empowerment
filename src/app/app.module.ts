@@ -63,6 +63,7 @@ import { SuccessMessageComponent } from './components/utility/success-message/su
 import { CourseDialogComponent } from './components/admin-components/course-dialog/course-dialog.component';
 import { EditCourseDialogComponent } from './components/admin-components/edit-course-dialog/edit-course-dialog.component';
 import { DeleteCourseConfirmationDialogComponent } from './components/admin-components/delete-course-confirmation-dialog/delete-course-confirmation-dialog.component';
+import { LogoutMenuComponent } from './components/utility/logout-menu/logout-menu.component';
 
 @NgModule({
   declarations: [
@@ -111,7 +112,8 @@ import { DeleteCourseConfirmationDialogComponent } from './components/admin-comp
     SuccessMessageComponent,
     CourseDialogComponent,
     EditCourseDialogComponent,
-    DeleteCourseConfirmationDialogComponent
+    DeleteCourseConfirmationDialogComponent,
+    LogoutMenuComponent
   ],
   imports: [
     BrowserModule,
