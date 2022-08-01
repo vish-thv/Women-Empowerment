@@ -65,6 +65,7 @@ import { EditCourseDialogComponent } from './components/admin-components/edit-co
 import { DeleteCourseConfirmationDialogComponent } from './components/admin-components/delete-course-confirmation-dialog/delete-course-confirmation-dialog.component';
 import { LogoutMenuComponent } from './components/utility/logout-menu/logout-menu.component';
 import { NgoApplicationDialogComponent } from './components/admin-components/ngo-application-dialog/ngo-application-dialog.component';
+import { TraineeApplicationDialogComponent } from './components/admin-components/trainee-application-dialog/trainee-application-dialog.component';
 
 @NgModule({
   declarations: [
@@ -115,7 +116,8 @@ import { NgoApplicationDialogComponent } from './components/admin-components/ngo
     EditCourseDialogComponent,
     DeleteCourseConfirmationDialogComponent,
     LogoutMenuComponent,
-    NgoApplicationDialogComponent
+    NgoApplicationDialogComponent,
+    TraineeApplicationDialogComponent
   ],
   imports: [
     BrowserModule,
