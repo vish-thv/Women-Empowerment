@@ -1,4 +1,4 @@
 export interface TraineeStatus {
-    NgoApplicationId: number
+    TraineeApplicationId: number
     Status: number
 }
