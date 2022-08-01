@@ -1,7 +1,7 @@
-<h3>Personal Details</h3>
 <error-message *ngIf="errorMessage">{{errorMessage}}</error-message>
 
 <success-message *ngIf="successMessage">{{successMessage}}</success-message>
+<h3>Personal Details</h3>
 
 <form [formGroup]="personalDetails" (submit)="savePersonalDetails()">
 

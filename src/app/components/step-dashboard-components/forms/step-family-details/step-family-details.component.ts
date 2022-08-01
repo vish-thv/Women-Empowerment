@@ -9,6 +9,8 @@ import { TraineeFamilyDetailsService } from 'src/app/services/trainee-details/tr
 })
 export class StepFamilyDetailsComponent implements OnInit {
 
+  traineeId: number = Number(localStorage.getItem('TraineeId'))
+
   // @ts-ignore
   familyDetails: FormGroup
   errorMessage:string=''
@@ -20,11 +22,11 @@ export class StepFamilyDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.getFamilyDetails()
     this.familyDetails = this.formBuilder.group({
-      TraineeId: ['1', [Validators.required, Validators.pattern('[0-9]+')]],
-      MotherName:['', [Validators.required, Validators.pattern('[a-zA-Z]+')]],
-      MotherDesignation:['', [Validators.required, Validators.pattern('[a-zA-Z]+')]],
-      FatherName:['', [Validators.required, Validators.pattern('[a-zA-Z]+')]],
-      FatherDesignation:['', [Validators.required, Validators.pattern('[a-zA-Z]+')]],
+      TraineeId: [this.traineeId, [Validators.required, Validators.pattern('[0-9]+')]],
+      MotherName:['', [Validators.required, Validators.pattern('[a-zA-Z ]+')]],
+      MotherDesignation:['', [Validators.required, Validators.pattern('[a-zA-Z ]+')]],
+      FatherName:['', [Validators.required, Validators.pattern('[a-zA-Z ]+')]],
+      FatherDesignation:['', [Validators.required, Validators.pattern('[a-zA-Z ]+')]],
       HusbandName:[''],
       NumberOfChildren:['']
     })
@@ -47,7 +49,6 @@ export class StepFamilyDetailsComponent implements OnInit {
       return
     this.traineeFamilyDetailsService.postFamilyDetails(this.familyDetails.value).subscribe((res) => {
       this.successMessage=res.success;
-      this.familyDetails.reset()
     }, (err) => {
       this.errorMessage=err.error
     })

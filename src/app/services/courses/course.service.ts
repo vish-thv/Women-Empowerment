@@ -39,6 +39,6 @@ export class CourseService {
   }
 
   handleError(err: HttpErrorResponse) {
-    return throwError(err.error)
+    return throwError(err)
   }
 }

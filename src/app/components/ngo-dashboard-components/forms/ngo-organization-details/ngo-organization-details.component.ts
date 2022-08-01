@@ -9,6 +9,8 @@ import { NgoOrganizationDetailsService } from 'src/app/services/ngo-details/ngo-
 })
 export class NgoOrganizationDetailsComponent implements OnInit {
 
+  ngoId: number = Number(localStorage.getItem('NgoId'))
+
   // @ts-ignore
   organizationDetails: FormGroup
   errorMessage:string=''
@@ -20,8 +22,8 @@ export class NgoOrganizationDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.getOrganizationDetails()
     this.organizationDetails = this.formBuilder.group({
-      NgoId: ['1', [Validators.required]],
-      OrganizationName: ['', [Validators.required]],
+      NgoId: [this.ngoId, [Validators.required]],
+      OrganisationName: ['', [Validators.required]],
       ChairmanName: ['', [Validators.required]],
       Pan: ['', [Validators.required]],
       SecretaryName: ['', [Validators.required]],
@@ -30,7 +32,7 @@ export class NgoOrganizationDetailsComponent implements OnInit {
   }
 
   getOrganizationDetails(): void {
-    this.ngoOrganizationDetailsService.getOrganizationDetails(1).subscribe((d) => {
+    this.ngoOrganizationDetailsService.getOrganizationDetails(this.ngoId).subscribe((d) => {
       console.log(d)
     })
   }
@@ -44,7 +46,6 @@ export class NgoOrganizationDetailsComponent implements OnInit {
       return
     this.ngoOrganizationDetailsService.postOrganizationDetails(this.organizationDetails.value).subscribe((res) => {
       this.successMessage=res.success;
-      this.organizationDetails.reset()
     }, (err) => {
       this.errorMessage=err.error
     })

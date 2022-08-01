@@ -29,7 +29,7 @@ export class TrainingSectorsComponent implements OnInit {
         this.courses.push(arr)
       }
     }, (err) => {
-      alert(err.error)
+      alert(err.error.error)
     })
   }
 

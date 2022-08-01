@@ -42,7 +42,7 @@ export class EditCourseDialogComponent implements OnInit {
         Description: [this.course.description, [Validators.required]]
       })
     }, (err) => {
-      alert(err.error)
+      alert(err.error.error)
     })
 
   }

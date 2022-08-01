@@ -1,5 +1,5 @@
 export interface TraineeFamilyDetails {
-      traineeId: string
+      traineeId: number
       motherName: string
       motherDesignation: string
       fatherName: string
