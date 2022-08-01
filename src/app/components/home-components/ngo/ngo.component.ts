@@ -80,7 +80,6 @@ export class NgoComponent implements OnInit {
     this.ngo = this.ngoRegister.value
 
     this.ngoService.register(this.ngo).subscribe((res) => {
-      this.ngoRegister.reset();
       this.ngoRegisterSubmitted = false
       this.registerSuccessMessage = res.success
       console.log(res)

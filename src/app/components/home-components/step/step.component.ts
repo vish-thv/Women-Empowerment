@@ -84,7 +84,6 @@ export class StepComponent implements OnInit {
     this.trainee = this.stepRegister.value
 
     this.traineeService.register(this.trainee).subscribe((res) => {
-      this.stepRegister.reset();
       this.stepRegisterSubmitted = false
       this.registerSuccessMessage = res.success
       console.log(res)
