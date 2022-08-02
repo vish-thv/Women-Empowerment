@@ -156,6 +156,31 @@ Angular Material is a User Interface (UI) component library that developers can 
 
 [Angular Material](https://material.angular.io/components/input/overview)
 
+```
+import {MatButtonModule} from '@angular/material/button';
+```
+
+```
+import {MatCheckboxModule} from '@angular/material/checkbox';
+```
+
+```
+import {MatDatepickerModule} from '@angular/material/datepicker';
+```
+
+```
+import {MatInputModule} from '@angular/material/input';
+```
+
+```
+import {MatRadioModule} from '@angular/material/radio';
+```
+
+```
+import {MatSelectModule} from '@angular/material/select';
+```
+
+
 ### Flexbox
 Flexbox is a one-dimensional layout model, and as a method that could offer space distribution between items in an interface and powerful alignment capabilities.
 
