@@ -5,6 +5,12 @@
     border-radius: 10px;
     margin-bottom: 10px;
 }
+.programme:first-child {
+    margin-top: 40px;
+}
+.programme:last-child {
+    margin-bottom: 20px;
+}
 .programme h1 {
     margin-bottom: 10px;
     color: #821854;
