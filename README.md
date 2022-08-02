@@ -140,12 +140,7 @@ Sub Header contains link
 ```
 
 
-## Angular | Development Settings
-
-## References
-[Angular Material](https://material.angular.io/components/input/overview)
-
-[Material Design Icon](https://materialdesignicons.com/)
+## Angular 
 
 ### Installations
 ```
@@ -155,6 +150,20 @@ ng add @angular/material
 ```
 npm i -s @angular/flex-layout @angular/cdk
 ```
+
+### Angular Material
+Angular Material is a User Interface (UI) component library that developers can use in their Angular projects to speed up the development of elegant and consistent user interfaces.
+
+[Angular Material](https://material.angular.io/components/input/overview)
+
+### Flexbox
+Flexbox is a one-dimensional layout model, and as a method that could offer space distribution between items in an interface and powerful alignment capabilities.
+
+[Flex-CSS](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
+
+### Material Deisgn SVG Icons
+[Material Design Icon](https://materialdesignicons.com/)]
 
 
 
