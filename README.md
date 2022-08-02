@@ -163,7 +163,7 @@ Flexbox is a one-dimensional layout model, and as a method that could offer spac
 
 
 ### Material Deisgn SVG Icons
-[Material Design Icon](https://materialdesignicons.com/)]
+[Material Design Icon](https://materialdesignicons.com/)
 
 
 ### Create Component
@@ -189,4 +189,9 @@ ng serve
 or 
 ng serve -o
 o in command stands for open in browser
+```
+
+## Run application on a different port
+```
+ng serve --port 4401   
 ```
