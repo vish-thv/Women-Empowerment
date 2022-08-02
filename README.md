@@ -1,7 +1,12 @@
 # Women Empowerment
 
 ## Objective
-Provide accommodation for working women, with day care facility for their children.
+Creating employment opportunities for women through Support to Training and Employment Programme for Women (STEP).
+
+To raise the status of women through education, awareness, literacy and training.
+
+This platform acts as a medium between women wanted to be self-dependent by acquiring a job and the NGOs which are independent and willing to teach skills to create employment opportunities.
+
 
 ## Eligibility
 ### Working Women
@@ -79,11 +84,6 @@ Sub Header contains link
 5. ADMIN
 6. FAQ
 ```
-
-
-STEP -> Login & Register
-
-On Successfull Login -> Welfare Schemes Dashboard
 
 ---
 
@@ -181,4 +181,12 @@ ng generate interface
 ### Create Service
 ```
 ng generate service
+```
+
+## Build and Serve application locally
+```
+ng serve
+or 
+ng serve -o
+o in command stands for open in browser
 ```
