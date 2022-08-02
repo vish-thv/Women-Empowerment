@@ -23,6 +23,7 @@ export class StepComponent implements OnInit {
   stepRegisterSubmitted: boolean = false
   registerErrorMessage: string = ''
   registerSuccessMessage: string = ''
+  dateOfBirthError: string = ''
 
   constructor(private router: Router, private formBuilder: FormBuilder, private traineeService: TraineeService) { }
 
@@ -73,6 +74,7 @@ export class StepComponent implements OnInit {
   }
 
   register(): void {
+    this.dateOfBirthError = ''
     this.stepRegisterSubmitted = true
     this.registerErrorMessage = ''
     this.registerSuccessMessage = ''
@@ -87,6 +89,14 @@ export class StepComponent implements OnInit {
       this.registerSuccessMessage = res.success
       console.log(res)
     }, (err) => {
+      console.log(err)
+      console.log(err.error)
+      console.log(err.error.errors)
+      if(err.error.errors) {
+        console.log(err.error.errors)
+        this.dateOfBirthError = err.error.errors.DateOfBirth[0]
+        console.log(this.dateOfBirthError)
+      }
       this.stepRegisterSubmitted = false
       this.registerErrorMessage = err.error.error
     })
