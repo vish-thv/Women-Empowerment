@@ -166,4 +166,19 @@ Flexbox is a one-dimensional layout model, and as a method that could offer spac
 [Material Design Icon](https://materialdesignicons.com/)]
 
 
+### Create Component
+```
+ng generate component 
+or
+ng g c 
+```
 
+### Create Interface 
+```
+ng generate interface
+```
+
+### Create Service
+```
+ng generate service
+```
