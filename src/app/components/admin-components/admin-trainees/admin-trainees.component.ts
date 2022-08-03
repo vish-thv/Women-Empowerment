@@ -37,6 +37,7 @@ export class AdminTraineesComponent implements OnInit {
   }
 
   fetchApplications = (): void => {
+    this.applications = []
     this.adminTraineeService.getApplications().subscribe((res) => {
       console.log(res)
       let arr = res.data

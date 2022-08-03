@@ -38,6 +38,7 @@ export class AdminNgosComponent implements OnInit {
   }
 
   fetchApplications = (): void => {
+    this.applications = []
     this.adminNgoService.getApplications().subscribe((res) => {
       console.log(res)
       let arr = res.data
